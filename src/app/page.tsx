@@ -8,6 +8,7 @@ import PersonalDataSection from "@/components/personalDataSection/PersonalDataSe
 import ProjectsSection from "@/components/proyectsSection/ProjectsSection";
 import WorkExperienceSection from "@/components/workExperienceSection/WorkExperienceSection";
 import { v4 as uuidv4 } from 'uuid';
+import EducationSection from "@/components/educationSection/EducationSection";
 
 const poppins = Poppins({ weight: '400', subsets: ['latin'] })
 
@@ -38,7 +39,6 @@ export default function Home() {
                 }
                 className="w-full"
                 href="#"
-
               >
                 {item.label}
               </Link>
@@ -49,6 +49,7 @@ export default function Home() {
       <PersonalDataSection />
       <ProjectsSection />
       <WorkExperienceSection />
+      <EducationSection/>
     </main>
   );
 }

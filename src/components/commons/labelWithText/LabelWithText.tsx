@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react'
 
 interface Props {
     label: string;
-    value: string | ReactNode;
+    value?: string | ReactNode;
     labelTop?: boolean
 }
 
