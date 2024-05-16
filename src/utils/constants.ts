@@ -121,27 +121,43 @@ export const educationCertifications = [
 
 export const developerTech = [
   {
-    name: "JavaScript",
+    name: "C++",
+    icono: "https://example.com/javascript-icon.png",
+  },
+  {
+    name: "C#",
+    icono: "https://example.com/javascript-icon.png",
+  },
+  {
+    name: "Figma",
+    icono: "https://example.com/javascript-icon.png",
+  },
+  {
+    name: "Git",
     icono: "https://example.com/javascript-icon.png",
   },
   {
     name: "HTML",
+    icono: "https://example.com/javascript-icon.png",
+  },
+  {
+    name: "Jira",
     icono: "https://example.com/html-icon.png",
   },
   {
-    name: "CSS",
+    name: "React",
     icono: "https://example.com/css-icon.png",
   },
   {
-    name: "React",
+    name: "Redux",
     icono: "https://example.com/react-icon.png",
   },
   {
-    name: "Node.js",
+    name: "Typescript",
     icono: "https://example.com/nodejs-icon.png",
   },
   {
-    name: "MongoDB",
+    name: "Visual Code",
     icono: "https://example.com/mongodb-icon.png",
   },
 ];

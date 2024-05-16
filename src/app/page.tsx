@@ -9,6 +9,7 @@ import ProjectsSection from "@/components/proyectsSection/ProjectsSection";
 import WorkExperienceSection from "@/components/workExperienceSection/WorkExperienceSection";
 import { v4 as uuidv4 } from 'uuid';
 import EducationSection from "@/components/educationSection/EducationSection";
+import SkillTechSection from "@/components/skillsTechSection/SkillTechSection";
 
 const poppins = Poppins({ weight: '400', subsets: ['latin'] })
 
@@ -17,7 +18,7 @@ export default function Home() {
     <main className={`flex min-h-screen flex-col items-center ${poppins.className}`}>
       <Navbar className="bg-orange-600">
         <NavbarContent className="lg:hidden">
-          <NavbarMenuToggle/>
+          <NavbarMenuToggle />
         </NavbarContent>
         <NavbarContent className="hidden lg:flex gap-4" justify="center">
           {
@@ -49,7 +50,8 @@ export default function Home() {
       <PersonalDataSection />
       <ProjectsSection />
       <WorkExperienceSection />
-      <EducationSection/>
+      <EducationSection />
+      <SkillTechSection />
     </main>
   );
 }
