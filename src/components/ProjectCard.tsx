@@ -15,7 +15,7 @@ const ProjectCard = ({ name, description, picture, url, technologies }: Props) =
         window.open(url, "_blank");
     }
     return (
-        <Card isBlurred className="py-4 bg-background/10 bg-black  max-w-full lg:max-w-[274px] lg:min-w-[274px]">
+        <Card isBlurred className="py-4 bg-background/10 bg-black  max-w-full lg:max-w-[274px] lg:min-w-[274px] hover:scale-105">
             <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
                 <h4 className="font-bold text-large text-orange-600">{name}</h4>
                 <p className="text-tiny uppercase font-bold text-white">{description}</p>

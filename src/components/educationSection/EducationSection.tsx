@@ -9,15 +9,13 @@ const EducationSection = () => {
     return (
         <div className='m-5'>
             <SectionContainer title='Educación y Certificaciones' id='education'>
-
                 <div className='flex flex-col m-8 sm:m-16 justify-between max-w-[875px] flex-1'>
                     <LabelWithText
                         key={uuidv4()}
                         label={"Educacion Academica"}
                         labelTop
-                        light
-                        value={<></>}
                     />
+                    <Divider />
                     {
                         education.map((value, index) => (
                             <div key={uuidv4()}>
@@ -26,6 +24,7 @@ const EducationSection = () => {
                                     label={"Institucion: "}
                                     value={value.institution}
                                 />
+
                                 <LabelWithText
                                     key={uuidv4()}
                                     label={"titulo: "}
@@ -36,7 +35,7 @@ const EducationSection = () => {
                                     label={"Fecha de finalizacion: "}
                                     value={value.graduationDate ?? "En curso"}
                                 />
-                                <Divider />
+
                             </div>
                         ))
                     }
@@ -48,7 +47,7 @@ const EducationSection = () => {
                         labelTop
                         value={<></>}
                     />
-
+                    <Divider />
                     {
                         educationCertifications.map((value, index) => (
                             <div key={uuidv4()} className='p-4'>
@@ -67,7 +66,6 @@ const EducationSection = () => {
                                     label={"Institucion Emisora"}
                                     value={value.institution}
                                 />
-                                <Divider />
                             </div>
                         ))
                     }

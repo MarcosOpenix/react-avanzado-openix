@@ -1,19 +1,26 @@
 import React from 'react'
 import LabelWithText from '../commons/labelWithText/LabelWithText'
-import SectionContainer from '../commons/SectionContainer'
-import { developerTech, workExperienceData } from '@/utils/constants'
+import { developerHabilities, developerTech } from '@/utils/constants'
 import { v4 as uuidv4 } from 'uuid';
-import { Card, CardFooter, CardHeader } from '@nextui-org/react';
 import TechnologyCard from './TechnologyCard';
+import { Chip } from '@nextui-org/react';
 
 const SkillTechSection = () => {
     return (
         <div className='m-5'>
-            <LabelWithText labelTop label='Experiencia con tecnologias'/>
-            <div className='flex flex-row space-x-6'>
+            <LabelWithText labelTop label='Habilidades' light />
+            <div className='flex flex-row gap-4 flex-wrap justify-center mt-4 mb-4'>
                 {
-                    developerTech.map(value => 
-                        <TechnologyCard key={uuidv4()} name={value} logo={`../technologiesIcons/${value}.svg`}/>
+                    developerHabilities.map(value =>
+                        <Chip key={uuidv4()} className='bg-orange-600 shadow-amber-600 text-xl p-7 text-white' variant="shadow">{value}</Chip>
+                    )
+                }
+            </div>
+            <LabelWithText labelTop label='Experiencia con tecnologias' light />
+            <div className='flex flex-row gap-4 flex-wrap justify-center mt-4 mb-4'>
+                {
+                    developerTech.map(value =>
+                        <TechnologyCard key={uuidv4()} name={value.name} logo={`../technologiesIcons/${value.name}.svg`} />
                     )
                 }
             </div>

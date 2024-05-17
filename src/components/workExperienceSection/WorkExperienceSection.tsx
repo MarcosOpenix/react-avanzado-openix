@@ -12,12 +12,11 @@ const WorkExperienceSection = () => {
                     <div className='flex flex-col m-8 sm:m-16 justify-between max-w-[875px]'>
                         {
                             workExperienceData.map((value) => (
-                                <div key={uuidv4()}>
+                                <div key={uuidv4()} className='mb-4'>
                                     <LabelWithText
                                         key={uuidv4()}
-                                        label={value.client}
+                                        label={`${value.client} ${value.startDate} - ${value.finishDate}`}
                                         labelTop
-                                        value={<></>}
                                         light
                                     />
                                     <LabelWithText

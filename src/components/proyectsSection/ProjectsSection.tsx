@@ -10,8 +10,7 @@ const ProjectsSection = () => {
     return (
         <div className='m-5'>
             <SectionContainer title='Proyectos' id='projects'>
-
-                <div className='flex flex-col lg:flex-row space-y-8 lg:space-y-0 lg:space-x-8 lg:flex-wrap'>
+                <div className='flex flex-row flex-wrap gap-4 justify-center w-full'>
                     {
                         projectsDataValues.map((value, index) => (
                             <ProjectCard

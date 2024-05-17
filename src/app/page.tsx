@@ -1,24 +1,21 @@
 'use client'
-import Image from "next/image";
-import { Button, Navbar, NavbarBrand, NavbarContent, NavbarItem, NextUIProvider, NavbarMenuToggle, NavbarMenu, NavbarMenuItem } from "@nextui-org/react";
+import { Navbar, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem } from "@nextui-org/react";
 import Link from "next/link";
-import { Poppins } from 'next/font/google'
-import { mainMenu, menuItems } from "@/utils/constants";
+import { mainMenu } from "@/utils/constants";
 import PersonalDataSection from "@/components/personalDataSection/PersonalDataSection";
 import ProjectsSection from "@/components/proyectsSection/ProjectsSection";
 import WorkExperienceSection from "@/components/workExperienceSection/WorkExperienceSection";
 import { v4 as uuidv4 } from 'uuid';
 import EducationSection from "@/components/educationSection/EducationSection";
 import SkillTechSection from "@/components/skillsTechSection/SkillTechSection";
-
-const poppins = Poppins({ weight: '400', subsets: ['latin'] })
+import ContactSection from "@/components/contactSection/ContactSection";
 
 export default function Home() {
   return (
-    <main className={`flex min-h-screen flex-col items-center ${poppins.className} bg-black`}>
+    <main className={`flex min-h-screen flex-col items-center bg-black`}>
       <Navbar className="bg-background/20">
         <NavbarContent className="lg:hidden">
-          <NavbarMenuToggle className="text-white"/>
+          <NavbarMenuToggle className="text-white" />
         </NavbarContent>
         <NavbarContent className="hidden lg:flex gap-4" justify="center">
           {
@@ -48,6 +45,7 @@ export default function Home() {
       <WorkExperienceSection />
       <div className="w-full bg-orange-600"><EducationSection /></div>
       <SkillTechSection />
+      <ContactSection/>
     </main>
   );
 }

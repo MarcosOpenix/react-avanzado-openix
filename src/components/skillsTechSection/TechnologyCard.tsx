@@ -11,7 +11,7 @@ const TechnologyCard = ({name, logo}: Props) => {
         <Card
             isFooterBlurred
             radius="lg"
-            className="border-none bg-background/10 w-28 h-28"
+            className="border-none bg-background/10 w-[100px] h-[100px] hover:scale-105"
         >
             <Image
                 alt={name}
@@ -20,7 +20,7 @@ const TechnologyCard = ({name, logo}: Props) => {
                 src={logo}
                 width={150}
             />
-            <CardFooter className="justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
+            <CardFooter className="justify-center border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
                 <p className="text-tiny text-white/80">{name}</p>
             </CardFooter>
         </Card>

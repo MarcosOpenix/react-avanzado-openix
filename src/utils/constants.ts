@@ -1,3 +1,5 @@
+import { FaFacebook, FaTwitter, FaLinkedin } from "react-icons/fa";
+
 export const menuItems = [
   "Profile",
   "Dashboard",
@@ -48,20 +50,23 @@ export const workExperienceData = [
   {
     jobPosition: "Front End Developer",
     client: "Openix",
-    description:
-      "Desarrollo de web oficial de openix incluyendo un modulo de administracion de contenido expuesto en la web",
+    startDate: "20/03/2020",
+    finishDate: "20/06/2024",
+    description: "Desarrollo de web oficial de openix incluyendo un modulo de administracion de contenido expuesto en la web",
   },
   {
     jobPosition: "Front End Developer",
     client: "Openix",
-    description:
-      "Desarrollo de web oficial de openix incluyendo un modulo de administracion de contenido expuesto en la web",
+    startDate: "20/03/2020",
+    finishDate: "20/06/2024",
+    description: "Desarrollo de web oficial de openix incluyendo un modulo de administracion de contenido expuesto en la web",
   },
   {
     jobPosition: "Front End Developer",
     client: "Openix",
-    description:
-      "Desarrollo de web oficial de openix incluyendo un modulo de administracion de contenido expuesto en la web",
+    startDate: "20/03/2020",
+    finishDate: "20/06/2024",
+    description: "Desarrollo de web oficial de openix incluyendo un modulo de administracion de contenido expuesto en la web",
   },
 ];
 
@@ -120,24 +125,38 @@ export const educationCertifications = [
 ];
 
 export const developerTech = [
-  "C++",
-  "C#",
-  "Figma",
-  "Git",
-  "HTML",
-  "Jira",
-  "React",
-  "Redux",
-  "Typescript",
-  "Visual Code",
-  "C++",
-  "C#",
-  "Figma",
-  "Git",
-  "HTML",
-  "Jira",
-  "React",
-  "Redux",
-  "Typescript",
-  "Visual Code",
+  { name:"C++", category: "Lenguaje de Programacion"},
+  { name:"C#", category: "Lenguaje de Programacion"},
+  { name:"Figma", category: "Herrame"},
+  { name:"Git", category: ""},
+  { name:"HTML", category: ""},
+  { name:"Jira", category: ""},
+  { name:"React", category: ""},
+  { name:"Redux", category: ""},
+  { name:"Typescript", category: ""},
+  { name:"Visual Code", category: ""},
+  { name:"C++", category: ""},
+  { name:"C#", category: ""},
+  { name:"Figma", category: ""},
+  { name:"Git", category: ""},
+  { name:"HTML", category: ""},
+  { name:"Jira", category: ""},
+  { name:"React", category: ""},
+  { name:"Redux", category: ""},
+  { name:"Typescript", category: ""},
+  { name:"Visual Code", category: ""},
 ];
+
+export const categoryTech = [
+  {id: 0, name: "Lenguajes de Programacion"},
+  {id: 1, name: "Herramientas"},
+  {id: 3, name: "Frameworks"},
+  {id: 4, name: "Base de Datos"}
+]
+
+export const developerHabilities = [
+  "Resolución de Problemas",
+  "Gestión de Proyectos",
+  "Colaboración en Equipo",
+  "Pensamiento Crítico",
+]
