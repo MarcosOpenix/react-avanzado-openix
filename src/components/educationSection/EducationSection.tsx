@@ -15,6 +15,7 @@ const EducationSection = () => {
                         key={uuidv4()}
                         label={"Educacion Academica"}
                         labelTop
+                        light
                         value={<></>}
                     />
                     {

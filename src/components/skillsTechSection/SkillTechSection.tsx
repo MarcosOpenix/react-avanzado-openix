@@ -10,10 +10,10 @@ const SkillTechSection = () => {
     return (
         <div className='m-5'>
             <LabelWithText labelTop label='Experiencia con tecnologias'/>
-            <div className='flex flex-row overflow-x-auto space-x-4 overflow-hidden'>
+            <div className='flex flex-row space-x-6'>
                 {
                     developerTech.map(value => 
-                        <TechnologyCard key={uuidv4()} name={value.name} logo={`../technologiesIcons/${value.name}.svg`}/>
+                        <TechnologyCard key={uuidv4()} name={value} logo={`../technologiesIcons/${value}.svg`}/>
                     )
                 }
             </div>

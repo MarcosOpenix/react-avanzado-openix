@@ -5,9 +5,10 @@ interface Props {
     title: string;
     children: ReactNode;
     id?: string;
+    light?: boolean;
 }
 
-const SectionContainer = ({ title, children, id }: Props) => {
+const SectionContainer = ({ title, children, id, light }: Props) => {
     return (
         <motion.div
             animate={{ opacity: 1, y: 0 }}
@@ -15,7 +16,7 @@ const SectionContainer = ({ title, children, id }: Props) => {
             transition={{ duration: 1 }}
         >
             <div className='m-5'>
-                <h1 className='text-center text-2xl' id={id}>{title}</h1>
+                <h1 className={`text-center text-2xl ${light ? "text-orange-600": "text-black"} font-bold`} id={id}>{title}</h1>
                 <div className='flex flex-col lg:flex-row border-solid border-orange-600 border-8 rounded-3xl  items-center lg:items-start'>
                     {children}
                 </div>

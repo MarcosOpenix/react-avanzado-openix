@@ -7,7 +7,7 @@ import { v4 as uuidv4 } from 'uuid';
 const WorkExperienceSection = () => {
     return (
         <div className='m-5'>
-            <SectionContainer title='Experiencia Laboral' id='workExperience'>
+            <SectionContainer title='Experiencia Laboral' id='workExperience' light>
                 <>
                     <div className='flex flex-col m-8 sm:m-16 justify-between max-w-[875px]'>
                         {
@@ -18,11 +18,13 @@ const WorkExperienceSection = () => {
                                         label={value.client}
                                         labelTop
                                         value={<></>}
+                                        light
                                     />
                                     <LabelWithText
                                         key={uuidv4()}
                                         label={value.jobPosition}
                                         value={value.description}
+                                        light
                                     />
                                 </div>
                             ))

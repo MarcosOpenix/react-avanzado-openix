@@ -15,32 +15,26 @@ const poppins = Poppins({ weight: '400', subsets: ['latin'] })
 
 export default function Home() {
   return (
-    <main className={`flex min-h-screen flex-col items-center ${poppins.className}`}>
-      <Navbar className="bg-orange-600">
+    <main className={`flex min-h-screen flex-col items-center ${poppins.className} bg-black`}>
+      <Navbar className="bg-background/20">
         <NavbarContent className="lg:hidden">
-          <NavbarMenuToggle />
+          <NavbarMenuToggle className="text-white"/>
         </NavbarContent>
         <NavbarContent className="hidden lg:flex gap-4" justify="center">
           {
             mainMenu.map(value => (
               <NavbarItem key={uuidv4()}>
-                <Link color="foreground" href={`/#${value.id}`}>
+                <Link className="text-white" href={`/#${value.id}`}>
                   {value.label}
                 </Link>
               </NavbarItem>
             ))
           }
         </NavbarContent>
-        <NavbarMenu>
+        <NavbarMenu className="bg-black bg-background/20">
           {mainMenu.map((item, index) => (
             <NavbarMenuItem key={`${item}-${index}`}>
-              <Link
-                color={
-                  index === 2 ? "primary" : index === menuItems.length - 1 ? "danger" : "foreground"
-                }
-                className="w-full"
-                href="#"
-              >
+              <Link className="w-full text-white" href={`/#${item.id}`}>
                 {item.label}
               </Link>
             </NavbarMenuItem>
@@ -48,9 +42,11 @@ export default function Home() {
         </NavbarMenu>
       </Navbar>
       <PersonalDataSection />
-      <ProjectsSection />
+      <div className="w-full bg-orange-600">
+        <ProjectsSection />
+      </div>
       <WorkExperienceSection />
-      <EducationSection />
+      <div className="w-full bg-orange-600"><EducationSection /></div>
       <SkillTechSection />
     </main>
   );

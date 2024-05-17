@@ -120,44 +120,24 @@ export const educationCertifications = [
 ];
 
 export const developerTech = [
-  {
-    name: "C++",
-    icono: "https://example.com/javascript-icon.png",
-  },
-  {
-    name: "C#",
-    icono: "https://example.com/javascript-icon.png",
-  },
-  {
-    name: "Figma",
-    icono: "https://example.com/javascript-icon.png",
-  },
-  {
-    name: "Git",
-    icono: "https://example.com/javascript-icon.png",
-  },
-  {
-    name: "HTML",
-    icono: "https://example.com/javascript-icon.png",
-  },
-  {
-    name: "Jira",
-    icono: "https://example.com/html-icon.png",
-  },
-  {
-    name: "React",
-    icono: "https://example.com/css-icon.png",
-  },
-  {
-    name: "Redux",
-    icono: "https://example.com/react-icon.png",
-  },
-  {
-    name: "Typescript",
-    icono: "https://example.com/nodejs-icon.png",
-  },
-  {
-    name: "Visual Code",
-    icono: "https://example.com/mongodb-icon.png",
-  },
+  "C++",
+  "C#",
+  "Figma",
+  "Git",
+  "HTML",
+  "Jira",
+  "React",
+  "Redux",
+  "Typescript",
+  "Visual Code",
+  "C++",
+  "C#",
+  "Figma",
+  "Git",
+  "HTML",
+  "Jira",
+  "React",
+  "Redux",
+  "Typescript",
+  "Visual Code",
 ];
