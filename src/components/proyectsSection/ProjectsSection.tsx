@@ -4,7 +4,7 @@ import LabelWithText from '../commons/labelWithText/LabelWithText'
 import SectionContainer from '../commons/SectionContainer'
 import { projectsDataValues } from '@/utils/constants'
 import { v4 as uuidv4 } from 'uuid';
-import ProjectCard from '../ProjectCard'
+import ProjectCard from './ProjectCard'
 
 const ProjectsSection = () => {
     return (
