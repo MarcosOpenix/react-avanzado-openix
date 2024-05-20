@@ -20,7 +20,7 @@ const SkillTechSection = () => {
             <div className='flex flex-row gap-4 flex-wrap justify-center mt-4 mb-4'>
                 {
                     categoryTech.map(category => (
-                        <div className='flex flex-1 flex-col'>
+                        <div key={uuidv4()} className='flex flex-1 flex-col'>
                             <div className='text-white text-center'>{category.name}</div>
                             <div className='flex flex-row gap-4 flex-wrap justify-center mt-4 mb-4'>
                                 {

@@ -28,21 +28,21 @@ export const projectsDataValues = [
     technologies: "React, Typescript, Material UI, Html",
     urlRepository:
       "https://bitbucket.org/openix-workspace/openix-sia-frontend/src/develop/",
-    picture: "../Sia.png",
+    picture: "/./Sia.png",
   },
   {
     projectName: "Web Openix",
     description: "Pagina Web Openix",
     technologies: "React, Typescript, Material UI, Html",
     urlRepository: "https://openix.tech/",
-    picture: "../WebOpenix.png",
+    picture: "/./WebOpenix.png",
   },
   {
     projectName: "SIA Openix 3",
     description: "Sistema de gestion de personal",
     technologies: "React, Typescript, Material UI, Html",
     urlRepository: "https://sia.openix.com.ar/",
-    picture: "../Sia.png",
+    picture: "/./Sia.png",
   },
 ];
 

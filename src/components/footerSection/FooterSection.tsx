@@ -15,7 +15,7 @@ const FooterSection = () => {
                 <h1 className='font-bold'>Contactame</h1>
                 <IconWithText icon={<GrIndicator />} text='R. Goyeneche 51, Perico, Jujuy, Argentina' />
                 <IconWithText icon={<GrPhone />} text='+549-3884222448' />
-                <IconWithText icon={<GrMail />} text='marcos@openix.com.ar' />
+                <IconWithText icon={<GrMail />} text='juanperez@openix.com.ar' />
             </div>
             <div className='flex flex-col flex-1 items-center lg:items-start'>
                 <h1 className='font-bold'>Redes</h1>

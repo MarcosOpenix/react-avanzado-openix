@@ -1,6 +1,4 @@
-import { Avatar } from '@nextui-org/react'
 import React from 'react'
-import LabelWithText from '../commons/labelWithText/LabelWithText'
 import SectionContainer from '../commons/SectionContainer'
 import { projectsDataValues } from '@/utils/constants'
 import { v4 as uuidv4 } from 'uuid';
@@ -12,7 +10,7 @@ const ProjectsSection = () => {
             <SectionContainer title='Proyectos' id='projects'>
                 <div className='flex flex-row flex-wrap gap-4 justify-center w-full'>
                     {
-                        projectsDataValues.map((value, index) => (
+                        projectsDataValues.map((value) => (
                             <ProjectCard
                                 key={uuidv4()}
                                 name={value.projectName}

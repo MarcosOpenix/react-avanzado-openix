@@ -35,7 +35,6 @@ const EducationSection = () => {
                                     label={"Fecha de finalizacion: "}
                                     value={value.graduationDate ?? "En curso"}
                                 />
-
                             </div>
                         ))
                     }
@@ -45,7 +44,6 @@ const EducationSection = () => {
                         key={uuidv4()}
                         label={"Certificaciones"}
                         labelTop
-                        value={<></>}
                     />
                     <Divider />
                     {

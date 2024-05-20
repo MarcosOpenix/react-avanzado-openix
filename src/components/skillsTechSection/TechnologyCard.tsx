@@ -1,4 +1,5 @@
-import { Card, CardFooter, Image } from '@nextui-org/react'
+import { Card, CardFooter } from '@nextui-org/react'
+import Image from 'next/image';
 import React from 'react'
 
 interface Props {

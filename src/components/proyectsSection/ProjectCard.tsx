@@ -1,4 +1,5 @@
-import { Button, Card, CardBody, CardFooter, CardHeader, Image } from '@nextui-org/react'
+import { Button, Card, CardBody, CardFooter, CardHeader } from '@nextui-org/react'
+import Image from 'next/image';
 import React from 'react'
 
 interface Props {
@@ -24,10 +25,11 @@ const ProjectCard = ({ name, description, picture, url, technologies }: Props) =
             <CardBody className="overflow-visible py-2">
                 <Card isFooterBlurred >
                     <Image
-                        removeWrapper
                         alt="Card example background"
                         className="z-0 w-full h-full scale-100 -translate-y-0 object-cover"
                         src={picture}
+                        width={200}
+                        height={200}
                     />
                     <CardFooter className="absolute bg-white/30 bottom-0 border-t-1 border-zinc-100/50 z-10 justify-between">
                         <Button className="text-tiny bg-orange-600" color="primary" radius="full" size="sm" onPress={abrir}>
