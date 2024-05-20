@@ -1,6 +1,6 @@
 import React from 'react'
 import LabelWithText from '../commons/labelWithText/LabelWithText'
-import { developerHabilities, developerTech } from '@/utils/constants'
+import { categoryTech, developerHabilities, developerTech } from '@/utils/constants'
 import { v4 as uuidv4 } from 'uuid';
 import TechnologyCard from './TechnologyCard';
 import { Chip } from '@nextui-org/react';
@@ -19,9 +19,18 @@ const SkillTechSection = () => {
             <LabelWithText labelTop label='Experiencia con tecnologias' light />
             <div className='flex flex-row gap-4 flex-wrap justify-center mt-4 mb-4'>
                 {
-                    developerTech.map(value =>
-                        <TechnologyCard key={uuidv4()} name={value.name} logo={`../technologiesIcons/${value.name}.svg`} />
-                    )
+                    categoryTech.map(category => (
+                        <div className='flex flex-1 flex-col'>
+                            <div className='text-white text-center'>{category.name}</div>
+                            <div className='flex flex-row gap-4 flex-wrap justify-center mt-4 mb-4'>
+                                {
+                                    developerTech.filter(tech => tech.categoryId === category.id).map(card => (
+                                        <TechnologyCard key={uuidv4()} name={card.name} logo={`../technologiesIcons/${card.name}.svg`} />
+                                    ))
+                                }
+                            </div>
+                        </div>
+                    ))
                 }
             </div>
         </div>

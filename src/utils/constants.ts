@@ -125,33 +125,24 @@ export const educationCertifications = [
 ];
 
 export const developerTech = [
-  { name:"C++", category: "Lenguaje de Programacion"},
-  { name:"C#", category: "Lenguaje de Programacion"},
-  { name:"Figma", category: "Herrame"},
-  { name:"Git", category: ""},
-  { name:"HTML", category: ""},
-  { name:"Jira", category: ""},
-  { name:"React", category: ""},
-  { name:"Redux", category: ""},
-  { name:"Typescript", category: ""},
-  { name:"Visual Code", category: ""},
-  { name:"C++", category: ""},
-  { name:"C#", category: ""},
-  { name:"Figma", category: ""},
-  { name:"Git", category: ""},
-  { name:"HTML", category: ""},
-  { name:"Jira", category: ""},
-  { name:"React", category: ""},
-  { name:"Redux", category: ""},
-  { name:"Typescript", category: ""},
-  { name:"Visual Code", category: ""},
+  { name: "C++", categoryId: 0 },
+  { name: "C#", categoryId: 0 },
+  { name: "Figma", categoryId: 1 },
+  { name: "Git", categoryId: 1 },
+  { name: "HTML", categoryId: 0 },
+  { name: "Jira", categoryId: 1 },
+  { name: "React", categoryId: 2 },
+  { name: "Redux", categoryId: 1 },
+  { name: "Typescript", categoryId: 0 },
+  { name: "Visual Code", categoryId: 1 },
+  { name: "SQL", categoryId: 3 }
 ];
 
 export const categoryTech = [
-  {id: 0, name: "Lenguajes de Programacion"},
-  {id: 1, name: "Herramientas"},
-  {id: 3, name: "Frameworks"},
-  {id: 4, name: "Base de Datos"}
+  { id: 0, name: "Lenguajes de Programacion" },
+  { id: 1, name: "Herramientas" },
+  { id: 2, name: "Frameworks" },
+  { id: 3, name: "Base de Datos" }
 ]
 
 export const developerHabilities = [
