@@ -21,6 +21,7 @@ const FeaturedSection = ({ categoryName, categoryId }: Props) => {
                     {
                         products.map(value => (
                             <ProductCard
+                                key={value.id}
                                 product={value}
                             />
                         ))
