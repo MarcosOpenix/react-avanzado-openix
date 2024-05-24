@@ -6,7 +6,7 @@ import { CartIcon } from "../icons/CartIcon";
 import { useRouter } from "next/navigation";
 
 export default function OpxNavbar() {
-  const { user, setUser } = useUserStore((state) => state);
+  const { user, cart, setUser } = useUserStore((state) => state);
   const router = useRouter();
   const menuItems = [
     "Profile",
@@ -46,7 +46,7 @@ export default function OpxNavbar() {
       <NavbarContent className="hidden sm:flex gap-4" justify="end">
         <NavbarItem isActive>
           <Link href="#" aria-current="page" className="text-black">
-            <Badge className="border-none" color="primary" content={50} shape="rectangle">
+            <Badge className="border-none" color="primary" content={cart.length} shape="rectangle">
               <CartIcon size={30} />
             </Badge>
           </Link>

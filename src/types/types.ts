@@ -13,3 +13,8 @@ export type Product = {
     imgUrl: string;
     description?: string;
 }
+
+export type ProductCart = {
+    productId: number;
+    quantity: number
+}

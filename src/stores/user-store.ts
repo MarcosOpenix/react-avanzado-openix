@@ -1,23 +1,26 @@
-import { User } from '@/types/types'
+import { ProductCart, User } from '@/types/types'
 import { createJSONStorage, persist } from 'zustand/middleware'
 import { createStore } from 'zustand/vanilla'
 
 export type UserState = {
-  user?: User
+  user?: User;
+  cart: ProductCart[];
 }
 
 export type UserActions = {
   setUser: (data?: User) => void
+  setCart: (cart?: ProductCart[]) => void
 }
 
 export type UserStore = UserState & UserActions
 
 export const initUserStore = (): UserState => {
-  return { user: undefined }
+  return { user: undefined, cart: [] }
 }
 
 export const defaultInitState: UserState = {
-  user: undefined
+  user: undefined,
+  cart: []
 }
 
 export const createUserStore = (
@@ -28,7 +31,7 @@ export const createUserStore = (
       (set) => ({
         ...initState,
         setUser: (data) => set((state) => ({...state, user: data})),
-        
+        setCart: (cart) => set((state) => ({...state, cart: cart}))
       }),
       {
         name: "currentUser",
