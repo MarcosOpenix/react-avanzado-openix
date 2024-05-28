@@ -76,6 +76,5 @@ export async function getProductsByCategory(categoryId?: number) {
         throw new Error('Failed to fetch categories');
     }
     const products = await response.json();
-    console.log(products)
     return products;
 }

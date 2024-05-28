@@ -1,18 +1,16 @@
 
 import { Metadata } from 'next';
-import { fetchProduct, fetchProductsByCategory } from '@/actions/productAction';
+import { fetchProductsByCategory } from '@/actions/productAction';
 import { notFound } from 'next/navigation';
-import ProductDetail from '@/components/productDetail/ProductDetail';
 import ProductCard from '@/components/productCard/ProductCard';
 
 export const metadata: Metadata = {
-  title: 'Edit',
+  title: 'Productos',
 };
 
 export default async function CategoryProducts({ params }: { params: { id: string } }) {
   const id = params.id;
   const products = await fetchProductsByCategory(id);
-    console.log(products)
   if (!products) {
     notFound();
   }

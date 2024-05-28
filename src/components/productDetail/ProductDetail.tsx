@@ -5,32 +5,20 @@ import { Button, Divider, Image } from '@nextui-org/react'
 import React from 'react'
 import { useState } from 'react';
 import QuantitySelector from '../common/quantitySelector/QuantitySelector'
+import SelledText from '../selledText/SelledText'
 
 interface Props {
     product: Product
 }
 
 const ProductDetail = ({ product }: Props) => {
-    const [productCart, setProductCard] = useState<ProductCart>({ productId: product.id, quantity: 1 })
-    const { cart, setCart } = useUserStore(
+    const [productCart, setProductCard] = useState<ProductCart>({ product: product, quantity: 1 })
+    const { addCartProduct } = useUserStore(
         (state) => state,
     )
 
     const handleAddProduct = () => {
-        const isAdded = cart.some(value => value.productId === productCart.productId);
-        if (isAdded) {
-            setCart(cart.map(value => {
-                if (value.productId === productCart.productId) {
-                    return {
-                        ...value,
-                        quantity: value.quantity + productCart.quantity
-                    }
-                }
-                return value
-            }))
-        }else{
-            setCart([...cart, productCart])
-        }
+        addCartProduct(productCart)
     }
 
     const handleChangeQuantity = (value: number) => {
@@ -48,7 +36,7 @@ const ProductDetail = ({ product }: Props) => {
             </div>
             <div className='flex flex-col border-solid border-1 w-[40%] rounded-lg p-4 place-content-between'>
                 <div>
-                    <div className='text-xs text-gray-500 mb-2'>{product.sold > 100 ? "+100" : product.sold} vendidos</div>
+                    <SelledText value={product.sold}/>
                     <div className='text-2xl font-semibold'>{product.name}</div>
                     <div className='text-3xl font-light'>$ {product.price}</div>
                     <Divider className="my-4" />

@@ -5,7 +5,7 @@ import { notFound } from 'next/navigation';
 import ProductDetail from '@/components/productDetail/ProductDetail';
 
 export const metadata: Metadata = {
-  title: 'Edit',
+  title: 'Producto',
 };
 
 export default async function ProducDetailPage({ params }: { params: { id: string } }) {

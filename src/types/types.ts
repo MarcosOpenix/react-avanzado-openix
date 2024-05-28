@@ -15,6 +15,11 @@ export type Product = {
 }
 
 export type ProductCart = {
-    productId: number;
+    product: Product;
     quantity: number
+}
+
+export type Category = {
+    id: number;
+    name: string;
 }
